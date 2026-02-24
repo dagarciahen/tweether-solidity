@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 
 pragma solidity ^0.8.20;
-contract UserStorage {
+contract UserStorage is BaseStorage {
 	//mappin uses uint as key to get info
 	//if public we dont need getter function
 	mapping(uint => Profile) public profiles;
