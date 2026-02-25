@@ -8,13 +8,10 @@ contract Owned {
         ownerAddr = msg.sender;
     }
 
-    function transferOwnership(address _newOwner) public {
+    function transferOwnership(address _newOwner) public onlyOwner {
         //only current owner can set a new owner addr
-        require(msg.sender == ownerAddr);
-
-        //the new addres cannot be null
-        require(_newOwner != address(0));
-        ownerAddr = _newOwner;
-
+        require(_newOwner != ownerAddr(0));
+	
+	ownerAddr = _newOwner;
     }
 }

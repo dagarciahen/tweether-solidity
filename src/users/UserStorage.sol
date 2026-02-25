@@ -11,7 +11,7 @@ contract UserStorage is BaseStorage {
 
 }
 uint latestUserId = 0;
-function createUser(bytes32 _username) public returns(uint) {
+function createUser(bytes32 _username) public onlyController returns(uint) {
 	latestUserId++;
 
 	profiles[latestUserId] = Profile(latestUserId, _username);
