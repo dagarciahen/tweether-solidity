@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
+import '../helpers/BaseStorage.sol';
 
 pragma solidity ^0.8.20;
 contract UserStorage is BaseStorage {
